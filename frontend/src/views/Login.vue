@@ -57,6 +57,8 @@ import {
 import { inject, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
+import { baseURL } from "@/utils/constants";
+import { parseToken } from "@/utils/auth";
 
 // Define refs
 const createMode = ref<boolean>(false);
@@ -127,13 +129,37 @@ const submit = async (event: Event) => {
 };
 
 // Run hooks
-onMounted(() => {
-  if (!recaptcha) return;
-
-  window.grecaptcha.ready(function () {
-    window.grecaptcha.render("recaptcha", {
-      sitekey: recaptchaKey,
+onMounted(async () => {
+  if (recaptcha) {
+    window.grecaptcha.ready(function () {
+      window.grecaptcha.render("recaptcha", {
+        sitekey: recaptchaKey,
+      });
     });
-  });
+  }
+
+  const ott = route.query.ott;
+  if (typeof ott === "string" && ott.trim() !== "") {
+    try {
+      const res = await fetch(`${baseURL}/api/login/redeem`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ott: ott }),
+      });
+
+      const body = await res.text();
+
+      if (res.status === 200) {
+        parseToken(body);
+        router.push({ path: "/files/" });
+      } else {
+        error.value = t("login.invalidLink");
+      }
+    } catch (e: any) {
+      error.value = t("login.invalidLink");
+    }
+  }
 });
 </script>

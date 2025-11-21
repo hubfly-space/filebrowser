@@ -38,6 +38,8 @@ func NewHandler(
 	// URLs https://www.gorillatoolkit.org/pkg/mux#Router.SkipClean
 	r = r.SkipClean(true)
 
+	ottStore := NewOTTStore()
+
 	monkey := func(fn handleFunc, prefix string) http.Handler {
 		return handle(fn, prefix, store, server)
 	}
@@ -50,6 +52,8 @@ func NewHandler(
 
 	tokenExpirationTime := server.GetTokenExpirationTime(DefaultTokenExpirationTime)
 	api.Handle("/login", monkey(loginHandler(tokenExpirationTime), ""))
+	api.Handle("/login/token", monkey(withUser(createLoginTokenHandler(ottStore)), "")).Methods("POST")
+	api.Handle("/login/redeem", monkey(redeemLoginTokenHandler(ottStore), "")).Methods("POST")
 	api.Handle("/signup", monkey(signupHandler, ""))
 	api.Handle("/renew", monkey(renewHandler(tokenExpirationTime), ""))
 
