@@ -43,7 +43,11 @@
     "upload": "Last opp",
     "openFile": "Open file",
     "discardChanges": "Slett",
-    "saveChanges": "Lagre Endringane "
+    "stopSearch": "Stop searching",
+    "saveChanges": "Lagre Endringane ",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "Nedlast filen",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Sorter etter sist endret",
     "sortByName": "Sorter etter navn",
     "sortBySize": "Sorter etter størrelse",
-    "noPreview": "Forhåndsvisning er ikkje tilgjengeleg for denne filen."
+    "noPreview": "Forhåndsvisning er ikkje tilgjengeleg for denne filen.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "velg fil eller katalog",
@@ -102,6 +115,7 @@
     "username": "Brukernavn",
     "usernameTaken": "Brukernavn er allerede i bruk",
     "wrongCredentials": "Feil legitimasjon",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "Du har blitt logget ut på grunn av inaktivitet"
     }

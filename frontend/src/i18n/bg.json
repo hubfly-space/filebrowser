@@ -43,7 +43,11 @@
     "upload": "Качи",
     "openFile": "Отвори файл",
     "discardChanges": "Изчисти",
-    "saveChanges": "Запиши промените"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Запиши промените",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "Свали файл",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Подредба по последна промяна",
     "sortByName": "Подредба по име",
     "sortBySize": "Подредба по размер",
-    "noPreview": "За този файл не е наличен преглед."
+    "noPreview": "За този файл не е наличен преглед.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "избери файл или директория",
@@ -102,6 +115,7 @@
     "username": "Потребителско име",
     "usernameTaken": "Потребителското име вече се използва",
     "wrongCredentials": "Грешни потребителско име и/или парола",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "Бяхте разлогнати поради неактивност"
     }

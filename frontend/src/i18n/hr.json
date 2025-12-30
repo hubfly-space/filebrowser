@@ -43,7 +43,11 @@
     "upload": "Prenesi",
     "openFile": "Otvori datoteku",
     "discardChanges": "Odbaci",
-    "saveChanges": "Spremi promjene"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Spremi promjene",
+    "editAsText": "Uredi kao tekst",
+    "increaseFontSize": "Povećaj veličinu fonta",
+    "decreaseFontSize": "Smanji veličinu fonta"
   },
   "download": {
     "downloadFile": "Preuzmi Datoteku",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Sortiraj po zadnjoj izmjeni",
     "sortByName": "Sortiraj po nazivu",
     "sortBySize": "Sortiraj po veličini",
-    "noPreview": "Pregled nije dostupan za ovu datoteku."
+    "noPreview": "Pregled nije dostupan za ovu datoteku.",
+    "csvTooLarge": "CSV datoteka je prevelika za pregled (>5MB). Molimo preuzmite da bi ste ju pregledali.",
+    "csvLoadFailed": "Neuspješno učitavanje CSV datoteke.",
+    "showingRows": "Prikazuje se {count} red(ova)",
+    "columnSeparator": "Separator stupaca",
+    "csvSeparators": {
+      "comma": "Zarez (,)",
+      "semicolon": "Točka zarez (;)",
+      "both": "I (,) i (;)"
+    }
   },
   "help": {
     "click": "odaberi datoteku ili mapu",
@@ -102,6 +115,7 @@
     "username": "Korisničko ime",
     "usernameTaken": "Korisničko ime zauzeto",
     "wrongCredentials": "Neispravno korisničko ime/lozinka",
+    "passwordTooShort": "Lozinka mora sadržavati minimalno {min} znakova",
     "logout_reasons": {
       "inactivity": "Odjavljeni ste zbog neaktivnosti."
     }
@@ -166,7 +180,7 @@
     "allowNew": "Stvori nove datoteke i mape",
     "allowPublish": "Objavi nove objave i stranice",
     "allowSignup": "Dopusti registraciju korisnicima",
-    "hideLoginButton": "Hide the login button from public pages",
+    "hideLoginButton": "Sakrij tipku za prijavu s javnih stranica",
     "avoidChanges": "(ostavite prazno kako biste izbjegli promjene)",
     "branding": "Brendiranje",
     "brandingDirectoryPath": "Put brendiranja",

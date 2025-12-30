@@ -43,7 +43,11 @@
     "upload": "Nahrať",
     "openFile": "Otvoriť súbor",
     "discardChanges": "Zahodiť",
-    "saveChanges": "Uložiť zmeny"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Uložiť zmeny",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "Stiahnuť súbor",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Zoradiť podľa dátumu",
     "sortByName": "Zoradiť podľa názvu",
     "sortBySize": "Zoradiť podľa veľkosti",
-    "noPreview": "Pre tento súbor nie je dostupný náhľad."
+    "noPreview": "Pre tento súbor nie je dostupný náhľad.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "vyberie súbor alebo priečinok",
@@ -102,6 +115,7 @@
     "username": "Používateľské meno",
     "usernameTaken": "Meno je už obsadené",
     "wrongCredentials": "Nesprávne prihlasovacie údaje",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "Boli ste odhlásení z dôvodu nečinnosti."
     }

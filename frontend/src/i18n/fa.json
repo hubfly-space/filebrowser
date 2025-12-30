@@ -43,7 +43,11 @@
     "upload": "آپلود",
     "openFile": "باز کردن فایل",
     "discardChanges": "لغو کردن",
-    "saveChanges": "Save changes"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Save changes",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "دانلود فایل",
@@ -75,7 +79,16 @@
     "sortByLastModified": "مرتب سازی آخرین ویرایش",
     "sortByName": "مرتب سازی نام",
     "sortBySize": "مرتب سازی اندازه",
-    "noPreview": "این فایل قابل نمایش نیست"
+    "noPreview": "این فایل قابل نمایش نیست",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "انتخاب فایل یا پوشه",
@@ -102,6 +115,7 @@
     "username": "نام کاربری",
     "usernameTaken": "نام کاربری تکراری",
     "wrongCredentials": "خطا در اعتبارسنجی",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "You have been logged out due to inactivity."
     }

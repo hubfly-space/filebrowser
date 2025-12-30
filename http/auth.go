@@ -1,4 +1,4 @@
-package http
+package fbhttp
 
 import (
 	"encoding/json"
@@ -12,7 +12,9 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/golang-jwt/jwt/v5/request"
 
-	fbErrors "github.com/filebrowser/filebrowser/v2/errors"
+	fbAuth "github.com/filebrowser/filebrowser/v2/auth"
+	fberrors "github.com/filebrowser/filebrowser/v2/errors"
+	"github.com/filebrowser/filebrowser/v2/settings"
 	"github.com/filebrowser/filebrowser/v2/users"
 )
 
@@ -61,6 +63,22 @@ func (e extractor) ExtractToken(r *http.Request) (string, error) {
 	return "", request.ErrNoTokenInRequest
 }
 
+func renewableErr(err error, d *data) bool {
+	if d.settings.AuthMethod != fbAuth.MethodProxyAuth || err == nil {
+		return false
+	}
+
+	if d.settings.LogoutPage == settings.DefaultLogoutPage {
+		return false
+	}
+
+	if !errors.Is(err, jwt.ErrTokenExpired) {
+		return false
+	}
+
+	return true
+}
+
 func withUser(fn handleFunc) handleFunc {
 	return func(w http.ResponseWriter, r *http.Request, d *data) (int, error) {
 		keyFunc := func(_ *jwt.Token) (interface{}, error) {
@@ -68,13 +86,9 @@ func withUser(fn handleFunc) handleFunc {
 		}
 
 		var tk authToken
-		token, err := request.ParseFromRequest(r, &extractor{}, keyFunc, request.WithClaims(&tk))
-		if err != nil || !token.Valid {
-			return http.StatusUnauthorized, nil
-		}
-
-		err = jwt.NewValidator(jwt.WithExpirationRequired()).Validate(tk)
-		if err != nil {
+		p := jwt.NewParser(jwt.WithValidMethods([]string{jwt.SigningMethodHS256.Alg()}), jwt.WithExpirationRequired())
+		token, err := request.ParseFromRequest(r, &extractor{}, keyFunc, request.WithClaims(&tk), request.WithParser(p))
+		if (err != nil || !token.Valid) && !renewableErr(err, d) {
 			return http.StatusUnauthorized, nil
 		}
 
@@ -171,7 +185,7 @@ var signupHandler = func(_ http.ResponseWriter, r *http.Request, d *data) (int, 
 	log.Printf("new user: %s, home dir: [%s].", user.Username, userHome)
 
 	err = d.store.Users.Save(user)
-	if errors.Is(err, fbErrors.ErrExist) {
+	if errors.Is(err, fberrors.ErrExist) {
 		return http.StatusConflict, err
 	} else if err != nil {
 		return http.StatusInternalServerError, err

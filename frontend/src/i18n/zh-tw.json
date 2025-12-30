@@ -42,8 +42,13 @@
     "update": "更新",
     "upload": "上傳",
     "openFile": "開啟檔案",
+    "stopSearch": "停止搜尋",
     "discardChanges": "放棄變更",
-    "saveChanges": "Save changes"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Save changes",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "下載檔案",
@@ -75,7 +80,16 @@
     "sortByLastModified": "按最後修改時間排序",
     "sortByName": "按名稱排序",
     "sortBySize": "按大小排序",
-    "noPreview": "此檔案無法預覽。"
+    "noPreview": "此檔案無法預覽。",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "選擇檔案或目錄",
@@ -102,6 +116,7 @@
     "username": "帳號",
     "usernameTaken": "用戶名已存在",
     "wrongCredentials": "帳號或密碼錯誤",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "You have been logged out due to inactivity."
     }
