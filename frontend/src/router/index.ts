@@ -193,6 +193,14 @@ router.beforeResolve(async (to, from, next) => {
   }
 
   if (to.path.endsWith("/login") && authStore.isLoggedIn) {
+    if (to.query.ott) {
+      authStore.clearUser();
+      localStorage.setItem("jwt", "");
+      document.cookie = "auth=; Max-Age=0; Path=/; SameSite=Strict;";
+      next();
+      return;
+    }
+
     next({ path: "/files/" });
     return;
   }
