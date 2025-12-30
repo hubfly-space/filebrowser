@@ -43,7 +43,11 @@
     "upload": "Μεταφόρτωση",
     "openFile": "Άνοιγμα αρχείου",
     "discardChanges": "Discard",
-    "saveChanges": "Save changes"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Save changes",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "Λήψη αρχείου",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Ταξινόμηση κατά πρόσφατη τροποποίηση",
     "sortByName": "Ταξινόμηση κατά όνομα",
     "sortBySize": "Ταξινόμηση κατά μέγεθος",
-    "noPreview": "Η προεπισκόπηση δεν είναι διαθέσιμη για αυτό το αρχείο."
+    "noPreview": "Η προεπισκόπηση δεν είναι διαθέσιμη για αυτό το αρχείο.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "επιλέξτε αρχείο ή φάκελο",
@@ -102,6 +115,7 @@
     "username": "Όνομα χρήστη",
     "usernameTaken": "Το όνομα χρήστη χρησιμοποιείται ήδη",
     "wrongCredentials": "Λάθος όνομα ή/και κωδικός πρόσβασης",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "You have been logged out due to inactivity."
     }

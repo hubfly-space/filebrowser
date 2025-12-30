@@ -43,7 +43,11 @@
     "upload": "Wyślij",
     "openFile": "Otwórz plik",
     "discardChanges": "Odrzuć",
-    "saveChanges": "Zapisz zmiany"
+    "stopSearch": "Zatrzymaj wyszukiwanie",
+    "saveChanges": "Zapisz zmiany",
+    "editAsText": "Edytuj jako tekst",
+    "increaseFontSize": "Zwiększ rozmiar czcionki",
+    "decreaseFontSize": "Zmniejsz rozmiar czcionki"
   },
   "download": {
     "downloadFile": "Pobierz plik",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Sortuj wg ostatniej modyfikacji",
     "sortByName": "Sortuj wg nazwy",
     "sortBySize": "Sortuj wg rozmiaru",
-    "noPreview": "Podgląd tego pliku jest niedostępny."
+    "noPreview": "Podgląd tego pliku jest niedostępny.",
+    "csvTooLarge": "Plik CSV jest za duży do podglądu (>5 MB). Pobierz, aby wyświetlić.",
+    "csvLoadFailed": "Nie udało się załadować pliku CSV.",
+    "showingRows": "Wyświetlanie wierszy: {count}",
+    "columnSeparator": "Separator kolumn",
+    "csvSeparators": {
+      "comma": "Przecinek (,)",
+      "semicolon": "Średnik (;)",
+      "both": "Zarówno (,), jak i (;)"
+    }
   },
   "help": {
     "click": "zaznacz plik lub folder",
@@ -102,6 +115,7 @@
     "username": "Nazwa użytkownika",
     "usernameTaken": "Ta nazwa użytkownika jest zajęta",
     "wrongCredentials": "Błędne dane logowania",
+    "passwordTooShort": "Wymagana minimalna liczba znaków hasła: {min}",
     "logout_reasons": {
       "inactivity": "Wylogowano z powodu braku aktywności."
     }

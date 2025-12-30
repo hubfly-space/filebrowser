@@ -1,4 +1,4 @@
-package http
+package fbhttp
 
 import (
 	"errors"
@@ -123,6 +123,7 @@ func getFiles(d *data, path, commonPath string) ([]archives.FileInfo, error) {
 	if path != commonPath {
 		nameInArchive := strings.TrimPrefix(path, commonPath)
 		nameInArchive = strings.TrimPrefix(nameInArchive, string(filepath.Separator))
+		nameInArchive = filepath.ToSlash(nameInArchive)
 
 		archiveFiles = append(archiveFiles, archives.FileInfo{
 			FileInfo:      info,

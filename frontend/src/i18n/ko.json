@@ -41,9 +41,14 @@
     "toggleSidebar": "사이드바 전환",
     "update": "업데이트",
     "upload": "업로드",
+    "stopSearch": "검색 중지",
     "openFile": "파일 열기",
     "discardChanges": "변경 사항 취소",
-    "saveChanges": "변경사항 저장"
+    "stopSearch": "Stop searching",
+    "saveChanges": "변경사항 저장",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "파일 다운로드",
@@ -75,7 +80,16 @@
     "sortByLastModified": "수정시간순 정렬",
     "sortByName": "이름순",
     "sortBySize": "크기순",
-    "noPreview": "미리 보기가 지원되지 않는 파일 유형입니다."
+    "noPreview": "미리 보기가 지원되지 않는 파일 유형입니다.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "파일이나 디렉토리를 선택해주세요.",
@@ -102,6 +116,7 @@
     "username": "사용자 이름",
     "usernameTaken": "사용자 이름이 존재합니다",
     "wrongCredentials": "사용자 이름 또는 비밀번호를 확인하십시오",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "You have been logged out due to inactivity."
     }

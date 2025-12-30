@@ -43,7 +43,11 @@
     "upload": "Subir",
     "openFile": "Abrir archivo",
     "discardChanges": "Discard",
-    "saveChanges": "Guardar cambios"
+    "stopSearch": "Stop searching",
+    "saveChanges": "Guardar cambios",
+    "editAsText": "Edit as Text",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
   },
   "download": {
     "downloadFile": "Descargar fichero",
@@ -75,7 +79,16 @@
     "sortByLastModified": "Ordenar por última modificación",
     "sortByName": "Ordenar por nombre",
     "sortBySize": "Ordenar por tamaño",
-    "noPreview": "La vista previa no está disponible para este archivo."
+    "noPreview": "La vista previa no está disponible para este archivo.",
+    "csvTooLarge": "CSV file is too large for preview (>5MB). Please download to view.",
+    "csvLoadFailed": "Failed to load CSV file.",
+    "showingRows": "Showing {count} row(s)",
+    "columnSeparator": "Column Separator",
+    "csvSeparators": {
+      "comma": "Comma (,)",
+      "semicolon": "Semicolon (;)",
+      "both": "Both (,) and (;)"
+    }
   },
   "help": {
     "click": "seleccionar archivo o carpeta",
@@ -102,6 +115,7 @@
     "username": "Usuario",
     "usernameTaken": "Nombre usuario no disponible",
     "wrongCredentials": "Usuario y/o contraseña incorrectos",
+    "passwordTooShort": "Password must be at least {min} characters",
     "logout_reasons": {
       "inactivity": "You have been logged out due to inactivity."
     }
